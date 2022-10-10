@@ -47,6 +47,27 @@
 
     <script type="text/javascript">
       
+      $(document).ready(function(){
+
+        $("#submit").click(function(){
+
+          var opa = parseFloat($("#ina").val());
+          var opb = parseFloat($("#inb").val());
+          var op = $('input[name="op"]:checked').val();
+          console.log(opa, opb, op);
+          var result;
+          switch(op){
+                    case "add" : { result = opa + opb; break; }
+                    case "sub" : { result = opa - opb; break; }
+                    case "mul" : { result = opa * opb; break; }
+                    case "div" : { result = opa / opb; break; }
+          }
+          console.log(result);
+          $("#result").text(result);
+
+        });
+
+      });
       
         
     </script>
